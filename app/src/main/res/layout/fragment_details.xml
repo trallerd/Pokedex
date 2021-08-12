@@ -8,10 +8,11 @@
     tools:context=".fragments.details">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/pokemon_avatar"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="50dp"
+        android:contentDescription="@string/avatar"
         android:src="@drawable/branco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,58 +23,63 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Nome Pokemon AQUI"
+        android:contentDescription="@string/pok_name"
+        android:text="@string/pok_name"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_avatar" />
 
     <TextView
         android:id="@+id/descType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:contentDescription="@string/pok_type"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/pok_type"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descName" />
 
     <TextView
-        android:id="@+id/descID"
+        android:id="@+id/descAbility"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:contentDescription="@string/pok_abilaty"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/pok_abilaty"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descType" />
 
     <TextView
-        android:id="@+id/descAbility"
+        android:id="@+id/descID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:contentDescription="@string/pok_id"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/pok_id"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descID" />
+        app:layout_constraintTop_toBottomOf="@+id/descAbility" />
 
     <Button
         android:id="@+id/backHome"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="60dp"
         android:background="@color/blue_layout"
-        android:text="back"
+        android:text="@string/btn_back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/descAbility" />
+        app:layout_constraintEnd_toEndOf="@+id/pokemon_avatar"
+        app:layout_constraintStart_toStartOf="@+id/pokemon_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/descID" />
 </androidx.constraintlayout.widget.ConstraintLayout>
