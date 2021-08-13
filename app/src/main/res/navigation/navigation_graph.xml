@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/start2">
+    app:startDestination="@id/details">
 
     <fragment
         android:id="@+id/start2"
-        android:name="com.example.pokedex.fragments.start"
+        android:name="com.example.pokedex.fragments.Start"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/home2"
-        android:name="com.example.pokedex.fragments.home"
+        android:name="com.example.pokedex.fragments.Home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/details"
-        android:name="com.example.pokedex.fragments.details"
+        android:name="com.example.pokedex.fragments.Details"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action

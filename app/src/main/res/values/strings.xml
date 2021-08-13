@@ -9,6 +9,6 @@
     <string name="pok_ability">Pokemon Ability</string>
     <string name="pok_id">Pokemon ID</string>
     <string name="btn_back">BACK</string>
-    <string name="btn_details">Detaisl</string>
+    <string name="btn_details">Details</string>
     <string name="enter">Enter</string>
 </resources>

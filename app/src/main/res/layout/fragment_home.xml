@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".fragments.home">
+    android:background="@drawable/pokedex_background"
+    tools:context=".fragments.Home">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pokemonList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

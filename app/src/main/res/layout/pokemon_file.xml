@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/pokemon"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -20,7 +19,7 @@
         <Button
             android:id="@+id/seePokemon"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:background="@color/blue_layout"
             android:contentDescription="@string/btn_details"
             android:text="@string/btn_details"
@@ -29,19 +28,19 @@
             android:textSize="14sp"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/txtNameP"
-            app:layout_constraintStart_toStartOf="@+id/txtNameP"
-            app:layout_constraintTop_toBottomOf="@+id/txtNameP" />
+            app:layout_constraintEnd_toEndOf="@+id/PokemonName"
+            app:layout_constraintStart_toStartOf="@+id/PokemonName"
+            app:layout_constraintTop_toBottomOf="@+id/PokemonName" />
 
         <TextView
-            android:id="@+id/txtNameP"
+            android:id="@+id/PokemonName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:contentDescription="@string/pok_name"
             android:gravity="center"
             android:text="@string/pok_name"
@@ -53,10 +52,10 @@
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:contentDescription="@string/avatar"
@@ -64,6 +63,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.771"
-            tools:src="@drawable/branco" />
+            app:srcCompat="@drawable/branco" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

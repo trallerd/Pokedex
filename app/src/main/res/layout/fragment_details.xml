@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".fragments.details">
+    tools:context=".fragments.Details">
 
     <ImageView
         android:id="@+id/pokemon_avatar"
@@ -48,7 +48,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:contentDescription="@string/pok_abilaty"
+        android:contentDescription="@string/pok_ability"
         android:gravity="center"
         android:text="@string/pok_ability"
         android:textSize="24sp"
