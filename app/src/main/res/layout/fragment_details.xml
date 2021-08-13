@@ -50,7 +50,7 @@
         android:layout_marginTop="15dp"
         android:contentDescription="@string/pok_abilaty"
         android:gravity="center"
-        android:text="@string/pok_abilaty"
+        android:text="@string/pok_ability"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

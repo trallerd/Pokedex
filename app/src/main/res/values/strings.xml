@@ -6,7 +6,7 @@
     <string name="avatar">Pokemon Avatar</string>
     <string name="pok_name">Pokemon Name</string>
     <string name="pok_type">Pokemon Type</string>
-    <string name="pok_abilaty">Pokemon Abilaty</string>
+    <string name="pok_ability">Pokemon Ability</string>
     <string name="pok_id">Pokemon ID</string>
     <string name="btn_back">BACK</string>
     <string name="btn_details">Detaisl</string>
