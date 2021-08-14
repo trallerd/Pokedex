@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokedex.R
 import com.example.pokedex.adapters.PokemonAdapter
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import kotlinx.android.synthetic.main.pokemon_file.*
 
 class Home : Fragment() {
     private lateinit var pokemonAdapter: PokemonAdapter
@@ -21,15 +22,17 @@ class Home : Fragment() {
         savedInstanceState : Bundle?
     ) : View? {
         val view = inflater.inflate(R.layout.fragment_home , container , false)
-        pokemonAdapter = PokemonAdapter()
-        view.pokemonList.adapter = PokemonAdapter()
+        view.pokemonList.adapter = PokemonAdapter(view.context)
         view.pokemonList.layoutManager = LinearLayoutManager(
             context ,
             LinearLayoutManager.VERTICAL ,
             false
         )
+
         return view
     }
+
+
 
 
 }

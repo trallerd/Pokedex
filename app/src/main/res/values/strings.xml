@@ -11,4 +11,5 @@
     <string name="btn_back">BACK</string>
     <string name="btn_details">Details</string>
     <string name="enter">Enter</string>
+    <string name="favorites">Favorites</string>
 </resources>

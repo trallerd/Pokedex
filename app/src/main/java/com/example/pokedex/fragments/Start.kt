@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.pokedex.R
+import kotlinx.android.synthetic.main.fragment_start.view.*
 
 class Start : Fragment() {
     override fun onCreateView(
@@ -13,6 +15,8 @@ class Start : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start, container, false)
+        val view = inflater.inflate(R.layout.fragment_start, container, false)
+        return view
     }
+
 }

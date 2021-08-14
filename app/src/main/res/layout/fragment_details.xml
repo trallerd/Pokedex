@@ -13,7 +13,7 @@
         android:layout_height="300dp"
         android:layout_marginTop="50dp"
         android:contentDescription="@string/avatar"
-        android:src="@drawable/branco"
+        app:srcCompat="@drawable/branco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -82,4 +82,15 @@
         app:layout_constraintEnd_toEndOf="@+id/pokemon_avatar"
         app:layout_constraintStart_toStartOf="@+id/pokemon_avatar"
         app:layout_constraintTop_toBottomOf="@+id/descID" />
+
+    <ImageView
+        android:id="@+id/favoriteDetails"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/open_heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
