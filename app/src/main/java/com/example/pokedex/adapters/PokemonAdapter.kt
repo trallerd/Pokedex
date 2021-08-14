@@ -5,6 +5,7 @@ import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
@@ -60,6 +61,8 @@ class PokemonAdapter(context: Context): RecyclerView.Adapter<PokemonAdapter.View
     inner class ViewHolder(item: View): RecyclerView.ViewHolder(item){
         fun fillView(pokemon: Result){
             itemView.PokemonName.text = pokemon.name.toUpperCase()
+            itemView.seePokemon.setOnClickListener {
+            }
 
         }
     }

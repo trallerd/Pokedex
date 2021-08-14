@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/HomeFragment"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/branco"
         android:title="@string/AppName" />
     <item
-        android:id="@+id/FavoritesFragment"
+        android:id="@+id/favoritesFragments"
         android:icon="@drawable/heart"
         android:title="@string/favorites" />
 </menu>
