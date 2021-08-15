@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.example.pokedex.database.daos.FavoriteDAO
 import com.example.pokedex.models.Favorite
 
-@Database(entities = [Favorite::class], version = 1)
+@Database(entities = [Favorite::class], version = 1,  exportSchema = false)
 abstract class AppDatabase: RoomDatabase() {
     abstract fun favoriteDAO(): FavoriteDAO
 }

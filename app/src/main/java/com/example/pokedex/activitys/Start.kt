@@ -1,8 +1,9 @@
-package com.example.pokedex
+package com.example.pokedex.activitys
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pokedex.R
 import kotlinx.android.synthetic.main.activity_start.*
 
 class Start : AppCompatActivity() {
@@ -11,7 +12,7 @@ class Start : AppCompatActivity() {
         setContentView(R.layout.activity_start)
 
         btnEnter.setOnClickListener{
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 

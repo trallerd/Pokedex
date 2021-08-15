@@ -18,7 +18,7 @@
 
 
         <TextView
-            android:id="@+id/PokemonName"
+            android:id="@+id/pokheight"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"

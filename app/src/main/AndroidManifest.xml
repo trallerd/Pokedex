@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity android:name=".Loading"></activity>
-        <activity android:name=".Start">
+        <activity android:name=".activitys.Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activitys.MainActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

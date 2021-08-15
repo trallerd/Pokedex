@@ -5,9 +5,14 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "favorites")
 class Favorite(
-    @PrimaryKey(autoGenerate = true)
-    var id: Long,
+    @PrimaryKey
+    var id: Int,
     var name: String,
     var types: String,
+    var abilities: String,
+    var species: String,
+    var height: Int,
+    var weight: Int,
+    var image: String
 ) {
 }

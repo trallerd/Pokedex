@@ -1,53 +1,30 @@
 package com.example.pokedex.adapters
 
-import android.app.AlertDialog
-import android.content.Context
 import android.os.Build
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Room
-import com.bumptech.glide.Glide
 import com.example.pokedex.Controller
 import com.example.pokedex.R
-import com.example.pokedex.database.AppDatabase
-import com.example.pokedex.database.daos.FavoriteDAO
-import com.example.pokedex.fragments.Details
-import com.example.pokedex.models.Favorite
-import com.example.pokedex.models.Pokemon.Pokemon
 import com.example.pokedex.models.PokemonList.Result
 import com.example.pokedex.network.dao.PokemonDAO
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_details.*
 import kotlinx.android.synthetic.main.pokemon_file.view.*
+import java.util.*
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-class PokemonAdapter(context: Context): RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
-    private val daoF: FavoriteDAO
+class PokemonAdapter(): RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
     private val dao: PokemonDAO = PokemonDAO()
-    private val pokemonsF: MutableList<Favorite>
     private var pokemons = listOf<Result>()
 
     init {
-        val db = Room.databaseBuilder(
-            context,
-            AppDatabase::class.java,
-            "pokemon-db"
-        )
-            .allowMainThreadQueries()
-            .build()
-
-        daoF = db.favoriteDAO()
         dao.getALL(0,100) { apiResult ->
-            pokemons = apiResult.results.toMutableList()
+            pokemons = apiResult.results
             notifyDataSetChanged()
         }
-        pokemonsF = daoF.getALL().toMutableList()
     }
 
     override fun getItemCount(): Int {
@@ -62,13 +39,14 @@ class PokemonAdapter(context: Context): RecyclerView.Adapter<PokemonAdapter.View
         )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val pokemon = pokemons!![position]
+        val pokemon = pokemons[position]
         holder.fillView(pokemon)
     }
 
     inner class ViewHolder(item: View): RecyclerView.ViewHolder(item){
         fun fillView(pokemon: Result){
-            itemView.PokemonName.text = pokemon.name.toUpperCase()
+            Controller.fav = false
+            itemView.pokheight.text = pokemon.name.uppercase(Locale.getDefault())
             dao.getByName(pokemon.name){pokemonAPI ->
                 Picasso.with(
                     itemView.context
