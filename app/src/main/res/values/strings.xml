@@ -4,12 +4,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="AppName">Pokedex</string>
     <string name="avatar">Pokemon Avatar</string>
-    <string name="pok_name">Pokemon Name</string>
-    <string name="pok_type">Pokemon Type</string>
-    <string name="pok_ability">Pokemon Ability</string>
-    <string name="pok_id">Pokemon ID</string>
+    <string name="pok_name">Name</string>
+    <string name="pok_type">Type</string>
+    <string name="pok_ability">Ability</string>
+    <string name="pok_id">ID</string>
     <string name="btn_back">BACK</string>
     <string name="btn_details">Details</string>
     <string name="enter">Enter</string>
     <string name="favorites">Favorites</string>
+    <string name="pok_species">Species</string>
+    <string name="pok_height">Height</string>
+    <string name="pok_weight">Weight</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.pokedex.models.Pokemon
 
+import java.io.Serializable
+
 data class Pokemon(
     val abilities: List<Ability>,
     val base_experience: Int,
@@ -19,4 +21,4 @@ data class Pokemon(
     val stats: List<Stat>,
     val types: List<Type>,
     val weight: Int
-)
+) : Serializable

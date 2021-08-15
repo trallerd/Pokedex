@@ -1,6 +1,7 @@
 package com.example.pokedex.network.dao
 
 import android.util.Log
+import com.example.pokedex.models.Pokemon.Pokemon
 import com.example.pokedex.models.PokemonList.PokemonList
 import com.example.pokedex.network.services.PokemonService
 import retrofit2.Call
@@ -26,9 +27,7 @@ class PokemonDAO {
                 call: Call<PokemonList>,
                 response: Response<PokemonList>
             ) {
-                Log.i("AAA" , response.body()!!.results.toString())
                 if (response.body() != null) {
-                    Log.i("AAA" , response.body()!!.results.toString())
                     finished(response.body()!!)
                 }
             }
@@ -39,5 +38,23 @@ class PokemonDAO {
 
         })
     }
+
+    fun getByName(name: String, finished: (Pokemon) -> Unit){
+        service.getByName(name).enqueue(object : Callback<Pokemon>{
+            override fun onResponse(call: Call<Pokemon>, response: Response<Pokemon>) {
+                Log.i("AAA" , response.body().toString())
+                if (response.body() != null) {
+                    Log.i("AAA" , response.body().toString())
+
+                    finished(response.body()!!)
+                }
+            }
+
+            override fun onFailure(call: Call<Pokemon>, t: Throwable) {
+                Log.i("Failure" , t.message.toString())
+            }
+        })
+    }
+
 
 }

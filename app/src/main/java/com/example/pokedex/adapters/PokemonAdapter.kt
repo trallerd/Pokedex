@@ -1,17 +1,22 @@
 package com.example.pokedex.adapters
 
+import android.app.AlertDialog
 import android.content.Context
 import android.os.Build
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import com.example.pokedex.Controller
 import com.example.pokedex.R
 import com.example.pokedex.database.AppDatabase
 import com.example.pokedex.database.daos.FavoriteDAO
+import com.example.pokedex.fragments.Details
 import com.example.pokedex.models.Favorite
 import com.example.pokedex.models.Pokemon.Pokemon
 import com.example.pokedex.models.PokemonList.Result
@@ -62,8 +67,10 @@ class PokemonAdapter(context: Context): RecyclerView.Adapter<PokemonAdapter.View
         fun fillView(pokemon: Result){
             itemView.PokemonName.text = pokemon.name.toUpperCase()
             itemView.seePokemon.setOnClickListener {
+                Controller.pokemon = pokemon.name
+                val navController = Navigation.findNavController(it)
+                navController.navigate(R.id.home_to_details)
             }
-
         }
     }
 
