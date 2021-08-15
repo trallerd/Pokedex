@@ -11,52 +11,37 @@
     app:cardElevation="3sp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/backgroundAnswer"
+        android:id="@+id/pokemon_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent">
+        android:background="@color/design_default_color_surface">
 
-
-        <Button
-            android:id="@+id/seePokemon"
-            android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="5dp"
-            android:background="@android:color/white"
-            android:contentDescription="@string/btn_details"
-            android:text="@string/btn_details"
-            android:textColor="@color/blue_layout"
-            android:textColorHint="@color/blue_layout"
-            android:textSize="14sp"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/PokemonName"
-            app:layout_constraintStart_toStartOf="@+id/PokemonName"
-            app:layout_constraintTop_toBottomOf="@+id/PokemonName" />
 
         <TextView
             android:id="@+id/PokemonName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
             android:background="@android:color/transparent"
             android:contentDescription="@string/pok_name"
             android:gravity="center"
             android:text="@string/pok_name"
-            android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textColor="@color/red_layout"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/avatar"
-            app:layout_constraintTop_toTopOf="@+id/avatar" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@android:color/transparent"

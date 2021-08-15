@@ -9,8 +9,10 @@
 
     <TextView
         android:id="@+id/descSpecies2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/pok_species"
         android:gravity="center|end"
@@ -18,12 +20,15 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/descID2"
+        app:layout_constraintStart_toEndOf="@+id/descSpecies"
         app:layout_constraintTop_toBottomOf="@+id/descType2" />
 
     <TextView
         android:id="@+id/descAbility2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/pok_ability"
         android:gravity="center|end"
@@ -31,12 +36,15 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/descID2"
+        app:layout_constraintStart_toEndOf="@+id/descAbility"
         app:layout_constraintTop_toBottomOf="@+id/descSpecies2" />
 
     <TextView
         android:id="@+id/descID2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
@@ -46,12 +54,15 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/descID"
         app:layout_constraintTop_toBottomOf="@+id/descName" />
 
     <TextView
         android:id="@+id/descHeight2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/pok_height"
         android:gravity="center|end"
@@ -59,12 +70,15 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/descID2"
+        app:layout_constraintStart_toEndOf="@+id/descHeight"
         app:layout_constraintTop_toBottomOf="@+id/descAbility2" />
 
     <TextView
         android:id="@+id/descWeight2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
@@ -74,12 +88,15 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/descID2"
+        app:layout_constraintStart_toEndOf="@+id/descWeight"
         app:layout_constraintTop_toBottomOf="@+id/descHeight2" />
 
     <TextView
         android:id="@+id/descType2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/pok_type"
         android:gravity="center|end"
@@ -87,6 +104,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/descID2"
+        app:layout_constraintStart_toEndOf="@+id/descType"
         app:layout_constraintTop_toBottomOf="@+id/descID2" />
 
     <ImageView
@@ -124,7 +142,7 @@
         android:gravity="center|start"
         android:shadowColor="@color/white"
         android:text="@string/pok_type"
-        android:textColor="@color/red_layout"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descID" />
@@ -140,7 +158,7 @@
         android:gravity="center|start"
         android:shadowColor="@color/white"
         android:text="@string/pok_species"
-        android:textColor="@color/red_layout"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descType" />
@@ -158,7 +176,7 @@
         android:gravity="center|start"
         android:shadowColor="@color/white"
         android:text="@string/pok_id"
-        android:textColor="@color/red_layout"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -178,7 +196,7 @@
         android:gravity="center|start"
         android:shadowColor="@color/white"
         android:text="@string/pok_height"
-        android:textColor="@color/red_layout"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -198,7 +216,7 @@
         android:gravity="center|start"
         android:shadowColor="@color/white"
         android:text="@string/pok_weight"
-        android:textColor="@color/red_layout"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -218,7 +236,7 @@
         android:gravity="center|start"
         android:shadowColor="@color/white"
         android:text="@string/pok_ability"
-        android:textColor="@color/red_layout"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

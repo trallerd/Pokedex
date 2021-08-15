@@ -12,6 +12,7 @@ import androidx.annotation.RequiresApi
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import com.bumptech.glide.Glide
 import com.example.pokedex.Controller
 import com.example.pokedex.R
 import com.example.pokedex.database.AppDatabase
@@ -21,6 +22,8 @@ import com.example.pokedex.models.Favorite
 import com.example.pokedex.models.Pokemon.Pokemon
 import com.example.pokedex.models.PokemonList.Result
 import com.example.pokedex.network.dao.PokemonDAO
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_details.*
 import kotlinx.android.synthetic.main.pokemon_file.view.*
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -66,7 +69,14 @@ class PokemonAdapter(context: Context): RecyclerView.Adapter<PokemonAdapter.View
     inner class ViewHolder(item: View): RecyclerView.ViewHolder(item){
         fun fillView(pokemon: Result){
             itemView.PokemonName.text = pokemon.name.toUpperCase()
-            itemView.seePokemon.setOnClickListener {
+            dao.getByName(pokemon.name){pokemonAPI ->
+                Picasso.with(
+                    itemView.context
+                ).load(
+                    pokemonAPI.sprites.front_default
+                ).into(itemView.avatar)
+            }
+            itemView.pokemon_card.setOnClickListener {
                 Controller.pokemon = pokemon.name
                 val navController = Navigation.findNavController(it)
                 navController.navigate(R.id.home_to_details)
