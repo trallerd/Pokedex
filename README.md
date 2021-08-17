@@ -3,6 +3,10 @@
 # Pokedex
 O aplicativo é uma pokedex possui duas listas, uma geral de todos pokemons com possibilidade de ver seus detalhes e outra apenas com os favoritos.
 
+
+### [Video Demo da Aplicação](https://www.youtube.com/watch?v=fwyRLzPuzik)
+
+
 ## Lista Geral
 
 > Lista do nome dos pokemons é retornado pela [API](https://pokeapi.co/) ultilizando [Retrofit](https://square.github.io/retrofit/). Sendo possível realizar o scroll dos items retornados e clicar em um deles para ver seus detalhes.
